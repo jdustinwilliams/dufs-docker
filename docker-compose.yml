@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  dufs:
+    image: sigoden/dufs
+    container_name: dufs
+    volumes:
+      - /srv/share:/data
+        #    ports:
+        #      - 8888:5000
+        #    command: "--allow-all /data"
+    command: "/data"
+
+networks:
+  default:
+    name: nginx
+    external: true
