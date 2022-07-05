@@ -4,6 +4,7 @@ services:
   dufs:
     image: sigoden/dufs
     container_name: dufs
+    restart: unless-stopped
     volumes:
       - /srv/share:/data
         #    ports:
